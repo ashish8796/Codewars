@@ -5,7 +5,7 @@ Construct a product array Of same size Such That
 prod[i] is equal to The Product of all the elements of Arr[] except Arr[i].
 '''
 
-arr = [16,17,4,3,5,2]
+arr = [8778, 219450, 219450, 11550, 8778, 3325, 31350]
 
 
 def product_array(numbers):
