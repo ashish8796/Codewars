@@ -17,6 +17,8 @@ def max_multiple(divisor, bound):
         if n % divisor == 0:
             return n
             break
+        elif divisor > bound:
+            return 0
         else:
             n -= 1
 
