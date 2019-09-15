@@ -2,7 +2,7 @@
 Implement the code to check if the given number is a Keith number. 
 Return the number number of iteration needed to confirm it; otherwise return false.
 '''
-n = 197
+n = 14
 
 
 def is_keith_number(n):
