@@ -1,11 +1,7 @@
 import math
-number = 145
+number = 123
 
 def strong_num(number):
-    lst = [math.factorial(int(i)) for i in str(number)]
-    if sum(lst) == number:
-        return "STRONG!!!!"
-    else:
-        return "Not Strong !!"
+    return "STRONG!!!!" if sum([math.factorial(int(i)) for i in str(number)])==number else "Not Strong !!"
 
 print(strong_num(number))
