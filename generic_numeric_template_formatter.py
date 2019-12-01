@@ -13,3 +13,4 @@ def numeric_formatter(template):
     return ' '.join(lst)
 
 print(numeric_formatter(template))
+
