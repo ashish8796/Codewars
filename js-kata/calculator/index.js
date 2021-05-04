@@ -75,20 +75,28 @@ const Calculator = function () {
           x = stack.pop();
         }
       } else {
-        if (findPriority(string[i]) <= findPriority(stack[stack.length - 1])) {
+        while (
+          findPriority(stack[stack.length - 1]) >= findPriority(string[i])
+        ) {
           queue.push(stack.pop());
         }
 
         stack.push(string[i]);
       }
 
+      console.log({ stack, queue });
+
       i++;
     }
 
-    cal([...queue, ...stack]);
+    while (stack.length !== 0) {
+      queue.push(stack.pop());
+    }
+
+    cal(queue);
   };
 };
 
 const calculate = new Calculator();
 
-calculate.evaluate("2 / 2 + 3 * 4 - 6");
+calculate.evaluate("72 * 35 + 94 / 42");
